@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Explain</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #signin-btn {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 5px 12px;
+            gap: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>OAuth Explain</h1>
+    <button id="signin-btn">
+        <img src="/google-icon.png" width="30" />
+        <span>SignIn with Google</span>
+    </button>
+    <a href="https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fauth%2Fgoogle%2Fcallback&client_id=1033050697543-srod8lq8eq8d468qee5cdptr95c329vk.apps.googleusercontent.com&access_type=offline&response_type=code&prompt=consent&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email">
+    signin
+    </a>
+
+    <script>
+        const signinBtn = document.getElementById('signin-btn')
+
+        signinBtn.addEventListener('click', () => {
+            console.log('signin')
+        })
+
+    </script>
+</body>
+
+</html>
